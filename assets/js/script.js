@@ -27,7 +27,7 @@ var storeHistory = function() {
 var fetchData = function(cityName) {
 
     // Get a lat and lon from cityname
-    var queryURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
+    var queryURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
     fetch(queryURL)
     .then(function(response){
