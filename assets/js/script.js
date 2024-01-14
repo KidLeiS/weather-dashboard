@@ -1,8 +1,10 @@
+// API Key for OpenWeather
 var apiKey = "5d401108ab3f24dbb4a6e79f76c7121a";
+
 var searchArray = [];
 
 
-// Localstorage
+// Initialisation - to retrieve localStorage and render search history
 
 var init = function(){
     if (localStorage.getItem("searchHistory") != null) {
@@ -16,12 +18,15 @@ var init = function(){
     }
 }
 
+// Function to store search history to localStorage
 var storeHistory = function() {
     localStorage.setItem("searchHistory",JSON.stringify(searchArray));
 }
 
-// Get a lat and lon from cityname
+//Primary logic for fetching OpenWeather data 
 var fetchData = function(cityName) {
+
+    // Get a lat and lon from cityname
     var queryURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${apiKey}`;
 
     fetch(queryURL)
@@ -69,6 +74,7 @@ var fetchData = function(cityName) {
 
 }
 
+//Function to clear appended data for next search
 var resetData = function(){
     $("#current-header").empty();
     $('#t1').empty();
@@ -97,6 +103,7 @@ $("#search-form").on("submit",function(event){
     storeHistory();
 })
 
+// History button click handle
 $('#history').on("click", ".list-item",function(event){
     event.preventDefault();
 
@@ -104,4 +111,5 @@ $('#history').on("click", ".list-item",function(event){
     fetchData($(this).text());
 })
 
+// Initialisaiton
 init();
