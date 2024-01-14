@@ -1,0 +1,35 @@
+#today {
+    border:2px solid darkblue;
+    margin: 5px 0px 5px 0px;
+    padding-top:10px;
+    background-color:rgb(197, 224, 234);
+}
+
+#forecast div {
+    color: white;
+    background-color: rgb(40, 40, 54);
+    margin:10px;
+    padding-top:10px;
+}
+
+
+#search-input {
+    width:23vw;
+    height:40px;
+    margin-bottom:10px;
+}
+
+#search-button {
+    width:23vw;
+    border-radius:12px;
+    background-color:rgb(0, 119, 255);
+    color: white;
+}
+
+.list-item {
+    width:23vw;
+    border: 1px solid black;
+    padding:7px;
+    margin-bottom:10px;
+    background-color:lightgrey;
+}
