@@ -27,12 +27,15 @@ You can access the application at the following [link](https://kidleis.github.io
 
 ## Usage
 
-The website should look something like this upon initialisation:
+The website should look like this after you search for weather conditions and forecast in a given city:
+
 ![An image of the calendar homepage](/assets/images/WeatherDashboard.png)
 
 You can search for cities to retrieve their current weather as well as weather forecasts for the next 5 days. Once you search for a city, it should be saved in the search history bar (which will persist on localStorage). 
 
 If you want to look up the forecast of previously searched cities, just click one of the city names in the search history.
+
+Please note: Search History is not available for users with a screen width of 1000px or smaller.
 
 ## Roadmap
 No roadmap! This is the final iteration of this relatively simple tool!
