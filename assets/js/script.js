@@ -44,7 +44,7 @@ var fetchData = function(cityName) {
             return response.json()
         }).then(function(data) {
             $("#current-header").text(cityName + " " + dayjs().format('DD/MM/YYYY'));
-            $("#current-header").append($("<img>").attr("src", "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"));
+            $("#current-header").append($("<img>").attr("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"));
             $("#current-temp").text("Temp: " + data.main.temp + " °C");
             $("#current-wind").text("Wind: " + data.wind.speed + " KPH");
             $("#current-humidity").text("Humidity: " + data.main.humidity + " %");
@@ -63,7 +63,7 @@ var fetchData = function(cityName) {
                 console.log(forecastArrays[i*8+7]);
                 var datetime = forecastArrays[i*8+7].dt_txt;
                 $(`#t${i+1}`).append($("<h4>").text(dayjs(datetime).format('DD/MM/YYYY')));
-                $(`#t${i+1}`).append($("<img>").attr("src", "http://openweathermap.org/img/w/" + forecastArrays[i*8+7].weather[0].icon + ".png"));
+                $(`#t${i+1}`).append($("<img>").attr("src", "https://openweathermap.org/img/w/" + forecastArrays[i*8+7].weather[0].icon + ".png"));
                 $(`#t${i+1}`).append($("<p>").text("Temp: " + forecastArrays[i*8+7].main.temp + " °C"));
                 $(`#t${i+1}`).append($("<p>").text("Wind: " + forecastArrays[i*8+7].wind.speed + " KPH"));
                 $(`#t${i+1}`).append($("<p>").text("Humidity: " + forecastArrays[i*8+7].main.humidity + " %"));
